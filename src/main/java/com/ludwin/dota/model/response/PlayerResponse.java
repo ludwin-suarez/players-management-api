@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class JugadorDotaResponse {
+public class PlayerResponse {
 
     private long id;
     private String code;
@@ -21,7 +21,7 @@ public class JugadorDotaResponse {
     private int age;
     private String email;
     private String countryCode;
-    private boolean state;
+    private boolean active;
     private Instant createdAt;
     private Instant updatedAt;
 

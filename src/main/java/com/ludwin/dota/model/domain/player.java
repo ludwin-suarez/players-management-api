@@ -3,7 +3,6 @@ package com.ludwin.dota.model.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
@@ -14,7 +13,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class player implements Serializable {
+public class Player implements Serializable {
     //private static final long serialVersionUID = 1L;
 
     @Id
@@ -24,7 +23,7 @@ public class player implements Serializable {
     @Column(name = "code", nullable = false, unique = true, length = 8)
     private String code;
 
-    @Column(nullable = false, unique = true, length = 40)
+    @Column(name = "nickname", nullable = false, unique = true, length = 40)
     private String nickName;
 
     @Column(name = "first_name", nullable = false, length = 80)
@@ -42,8 +41,8 @@ public class player implements Serializable {
     @Column(name = "country_code", length = 2)
     private String countryCode;
 
-    @Column(nullable = false)
-    private boolean state = true;
+    @Column(name = "active", nullable = false)
+    private boolean active = true;
 
     @Column(name = "created_at", insertable = false, updatable = false)
     private Instant createdAt;

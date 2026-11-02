@@ -4,7 +4,7 @@ import lombok.Data;
 import jakarta.validation.constraints.*;
 
 @Data
-public class JugadorDotaRequest {
+public class PlayerRequest {
 
     @Size(min = 8, max = 8, message = "EL CAMPO CÓDIGO DEBE TENER 8 CARACTERES")
     @NotBlank(message = "EL CAMPO CÓDIGO NO DEBE ESTAR EN BLANCO")
